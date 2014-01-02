@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+int store;
+int factorial(int);
+int main()
+{
+    cout << "Please enter an number to compute its factorial"<<endl;
+    cin>>store;
+    cout<<"The factorial of "<<store<<" is "<<store<<" ! = "<<factorial(store);
+    return 0;
+}
+
+
+int factorial(int n)
+{
+    int value = 1;
+
+    for(int i =1;i<=n;i++)
+    {
+        value= value*i;
+    }
+    return value;
+}

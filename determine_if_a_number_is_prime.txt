@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+bool isprime(int,int);
+int store;
+
+bool isprime(int number,int d)
+{
+    if(d==1)
+    {
+        return true;
+    }
+    else if(number%d ==0)
+    {
+        return false;
+    }
+    else
+    {
+        return isprime(number,d-1);
+    }
+}
+int main()
+{
+    cout << "Please enter an integer to check if it is prime or not"<<endl;
+    cin>>store;
+	//need to make special case for 0 and 1.
+    if(isprime(store,store-1))
+    {
+        cout<<"The number is prime"<<endl;
+    }
+    else
+    {
+        cout<<"The number is not prime"<<endl;
+    }
+    return 0;
+}

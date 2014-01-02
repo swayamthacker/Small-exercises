@@ -1,0 +1,76 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+const int size = 100;
+char store[size] = "{{abc{defg{ijk}{l{mn}}op}qr}}";
+char array[size];
+int top = 0;
+void push(char);
+void pop();
+void test_top();
+
+int main()
+{
+    int length = 0;
+
+    while(store[length]!= '\0')
+    {
+        if(store[length] == '{')
+        {
+            push(store[length]);
+            //cout<<"Iget here"<<endl;
+        }
+        if(store[length] == '}')
+        {
+            pop();
+            //cout<<" I get here too"<<endl;
+        }
+        length++;
+    }
+    test_top();
+    return 0;
+}
+
+void push(char x)
+{
+    if(top ==size)
+    {
+        cout<<"The stack is full"<<endl;
+        return;
+    }
+    array[top] = x;
+    top++;
+    //cout<<"Top = "<<top<<endl;
+}
+
+void pop()
+{
+    /*if(top==0)
+    {
+        cout<<"The stack is empty"<<endl;
+        return;
+    }*/
+    //cout<<"The top element is "<<array[top]<<endl;
+
+    //{
+    top--;
+    //return;
+    //}
+    //cout<<"The stack is empty"<<endl;
+
+    //cout<<"Top = "<<top<<endl;
+}
+
+void test_top()
+{
+    if(top!=0)
+    {
+        cout<<"This string is not balanced"<<endl;
+        cout<<"The value of top is "<<top<<endl;
+    }
+    else
+    {
+        cout<<"This string is balanced"<<endl;
+    }
+}

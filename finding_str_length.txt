@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+char store;
+int value;
+int calculate_length(char *);
+int main()
+{
+    cout << "Please enter a string"<<endl;
+    cin>>store;
+    cout<<""
+    value = calculate_length(&store);
+    cout<<value<<endl;
+
+    return 0;
+}
+
+
+int calculate_length(char* st) {
+    int length = 0;
+    if(st!=NULL)
+    {
+    while (st[length] != '\0') {
+        length++;
+    }
+    }
+    return length;
+}

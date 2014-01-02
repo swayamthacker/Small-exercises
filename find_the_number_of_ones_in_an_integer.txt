@@ -1,0 +1,25 @@
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+int store;
+int count;
+const int size = 8;
+char buffer[size];
+int main()
+{
+    cout << "Please enter an integer" << endl;
+    cin>>store;
+
+    itoa(store,buffer,10);
+
+    for(int i = 0;i<size;i++)
+    {
+        if(buffer[i]== '1')
+        {
+            count++;
+        }
+    }
+    cout<<"The number of ones in the integer is "<<count<<endl;
+    return 0;
+}
