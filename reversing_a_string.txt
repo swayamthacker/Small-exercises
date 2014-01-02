@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+void reverse_string(string,int);
+
+int main()
+{
+    string store;
+    int length1;
+    cout<<"Please enter the string that needs to be reversed"<<endl;
+    getline(cin,store);
+    length1 = store.length();
+    reverse_string(store,length1);
+    cout<<"7/2 = "<<7/2<<endl;
+    return 0;
+}
+
+
+void reverse_string(string x,int length1)
+{
+    if(length1>0)
+    {
+    cout<<x.substr(length1 - 1,1);
+
+    reverse_string(x,length1-1);
+    }
+}
