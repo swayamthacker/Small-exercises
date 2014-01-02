@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+int store;
+int fact;
+int factorial(int);
+
+int main()
+{
+    cout << "Please enter the integer whose factorial you wish to calculate"<<endl;
+    cin>>store;
+    fact = factorial(store);
+    cout<<store<<"!="<<fact<<endl;
+    return 0;
+}
+
+int factorial(int number)
+{
+    if(number<=1)
+    {
+        return 1;
+    }
+    else{
+        return number*factorial(number-1);
+    }
+}
