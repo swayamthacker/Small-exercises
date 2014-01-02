@@ -1,0 +1,54 @@
+//Converts a number to characters in an array, and converts the characters in an array back to an int
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+using namespace std;
+const int size = 5;
+int array [size];
+
+char a[size];
+void numtostring(int);
+
+int main()
+{
+    int store;
+    for(int i = 0;i<size;i++)
+    {
+    cout << "Please enter the next integer that has to be added to the array" << endl;
+    cin>>array[i];
+    }
+    for(int x = 0;x<size;x++)
+    {
+        numtostring(array[x]);
+    }
+    {
+        cout<<"The character array is"<<endl;
+        for(int i = 0;i<size;i++)
+        {
+            cout<<a[i]<<" ";
+        }
+        cout<<endl;
+    }
+
+    store = atoi(a);
+    cout<<"The integer is "<<store<<endl;
+    //store = 0;
+    //for(int i = 0;i<size;i++)
+    //store = 10*store + (a[i]-'0');
+    //cout<<"The integer is "<<store<<endl;
+
+    return 0;
+}
+
+
+void numtostring(int n)
+{
+    static int i = 0;
+    if(n>0)
+    {
+        a[i] = n%10 + '0'; //think of '0' as adding the number 48.
+        n = n/10;
+        i++;
+    }
+}
