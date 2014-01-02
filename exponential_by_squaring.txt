@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+int value;
+int power;
+double exponent_by_squaring(int,int);
+
+int main()
+{
+    cout << "Please enter the value for p"<<endl;
+    cin>>value;
+    cout<<"Please enter the power"<<endl;
+    cin>>power;
+
+    double store = exponent_by_squaring(value,power);
+
+    cout<<"The result is "<<store<<endl;
+
+    return 0;
+}
+
+double exponent_by_squaring(int p,int q)
+{
+    //x^n = x(x^2)^((n-1)/2) if n is odd, (x^2)^(n/2) if n is even.
+    if(q<0)
+    {
+        return exponent_by_squaring(1/p,-q);
+    }
+    else if(q == 0)
+    {
+        return 1;
+    }
+    else if(q==1)
+    {
+        return p;
+    }
+    else if(q%2==0)
+    {
+        return exponent_by_squaring(p*p,q/2); //if n is even return (x^2)^(n/2)
+    }
+    else
+    {
+        return p*exponent_by_squaring(p*p,(q-1)/2);
+    }
+}
+
+
