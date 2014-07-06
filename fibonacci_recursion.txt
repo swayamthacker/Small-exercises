@@ -3,6 +3,7 @@
 using namespace std;
 int counter;
 int fibonacci(int);
+
 int main()
 {
     cout << "Please enter the number of elements that you would like to display the fibonacci series till"<<endl;
@@ -13,6 +14,8 @@ int main()
     }
     return 0;
 }
+
+//3 different implementations (use any one of them)
 
 int fibonacci(int number)
 {
@@ -28,3 +31,43 @@ int fibonacci(int number)
     return fibonacci(number-1)+fibonacci(number-2);
     }
 }
+
+
+int fibonaaci(int n)
+{
+    int fib[n+1];
+    fib[0] = 1;
+    fib[1] = 1;
+    
+    for(int x = 2; x<=n;x++)
+    {
+        fib[x] = fib[x-1] + fib[x-2];
+    }
+    
+    return fib[n];
+}
+
+
+
+int fibonacci(int n)
+{
+
+    if(n==0 ||n ==1)
+    {
+        return 1;
+    }
+    else
+    {
+        int m = 1;
+        int n = 1;
+        int c;
+        for(int x = 2;x<=n;x++)
+        {
+            c = m + n;
+            m = n;
+            n = c;
+        }
+    }
+    return c;
+}
+
