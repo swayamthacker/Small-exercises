@@ -45,7 +45,7 @@ int main()
 void numtostring(int n)
 {
     static int i = 0;
-    if(n>0)
+    while(n>0)
     {
         a[i] = n%10 + '0'; //think of '0' as adding the number 48.
         n = n/10;
