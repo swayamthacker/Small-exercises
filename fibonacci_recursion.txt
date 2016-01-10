@@ -49,10 +49,10 @@ int fibonaaci(int n)
 
 
 
-int fibonacci(int n)
+int fibonacci(int d)
 {
 
-    if(n==0 ||n ==1)
+    if(d==0 ||d ==1)
     {
         return 1;
     }
@@ -61,7 +61,7 @@ int fibonacci(int n)
         int m = 1;
         int n = 1;
         int c;
-        for(int x = 2;x<=n;x++)
+        for(int x = 2;x<=d;x++)
         {
             c = m + n;
             m = n;
