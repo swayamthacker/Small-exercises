@@ -72,7 +72,7 @@ efficientFrontier <- function (returns, maximumAllocation=NULL,
   effMatrix <- matrix(nrow=loops, ncol=num+3)
   colnames(effMatrix) <- c(colnames(returns), "StandardDeviation", "ExpectedReturn", "SharpeRatio")
   
-  # Loop through the quadratic program solver
+  # solver
   for (i in seq(from=0, to=mktRiskPremium, by=incrementalMktRiskPremium))
     {
       dvec <- colMeans(returns) * i # This moves the solution along the EF
@@ -87,11 +87,11 @@ efficientFrontier <- function (returns, maximumAllocation=NULL,
   return(as.data.frame(effMatrix))
 }
 
-# Run the eff.frontier function based on no short and 50% alloc. restrictions
+# Run the efficient frontier function based on max alloc = 50% 
 frontier <- efficientFrontier(returns=returns$R,maximumAllocation=0.5,
                     mktRiskPremium=1, incrementalMktRiskPremium=.001)
 
-# Find the optimal portfolio
+#optimal portfolio
 frontier.optimal.point <- frontier[frontier$SharpeRatio==max(frontier$SharpeRatio),]
 
 print (frontier.optimal.point)
