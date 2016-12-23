@@ -29,7 +29,7 @@ returns <- getReturns(stocks, 'd',start="2013-12-31")
 
 # In the below function, 
 #returns is a matrix containing returns for each security
-#maximumAllocation is the maximum % allowed for any one security (reduces concentration) 
+#maximumAllocation is the maximum % allowed for any one security
 #mktRiskPremium is the upper limit of the mkt risk premium modeled
 #incrementalMktRiskPremium is the value to increment risk premium by; from 0 to mktRiskPremium;
 #it is useful for determining the efficient frontier for different risk premium profiles
