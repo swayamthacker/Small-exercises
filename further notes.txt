@@ -1,0 +1,61 @@
+1. analyzing and plotting YOY change for each ticker's sales, 
+2. for a given ticker, estimate the sales value for the next quarter, 
+3. possible inflection points (trends changing, directional) for the sales of tickers which had the best prediction ability.
+
+
+
+
+do the above for normalized and non-normalized data.
+
+2.
+build a system in R, that as a given ticker is entered
+daily date, sales, forecast for next quarter (next 90 days),forecast error. Also could go the way of doing this analysis plainly on quarterly data.
+
+Identify the tickers with the least forecasting error.
+
+
+do forecast for daily data on each day for sales amount.
+
+For a quarter forecast, just add the 90 days worth of sales  amt you had estiamted.
+
+YOY change, is just a forecast of the 90 days this year forecasted compared to 90 days last year (forecasted)
+
+for sales index:
+
+do a forecast of the index normalizer (daily)
+
+for a quarter forecast of sales index, just add the 90 days worth of sales amt you had estimated from before / (90 days worth of index normalizer added up)
+
+YOY change is just a forecast of the 90 days this year compared to 90 days last year (forecasted).
+
+
+analyze and plot YOY change. Estimate the ticker sales/sales index for next quarter. Graph the daily sales (see if you can break it down into quarters).
+
+
+Still need to think about the inflection points thing.
+
+
+Step 1: Keep it daily. based on the excel videos, build a forecast for forecasting the last 20 days. sp predicting 2016-01-01 to 2016-01-28
+
+
+
+http://robjhyndman.com/talks/MelbourneRUG.pdf
+
+http://www.statmethods.net/advstats/timeseries.html
+
+https://www.r-bloggers.com/basic-forecasting/
+
+http://robjhyndman.com/hyndsight/dailydata/
+
+https://www.google.com/search?q=R+yearly+forecast&oq=R+yearly+forecast&aqs=chrome..69i57.2414j0j1&sourceid=chrome&ie=UTF-8#q=R+daily+forecast
+
+http://stats.stackexchange.com/questions/144158/daily-time-series-analysis
+
+http://a-little-book-of-r-for-time-series.readthedocs.io/en/latest/src/timeseries.html
+
+http://www.cookbook-r.com/Manipulating_data/Calculating_a_moving_average/
+
+http://stackoverflow.com/questions/26133346/loop-for-forecasting-values-on-a-data-frame
+
+https://www.dataiku.com/learn/guide/code/r/time_series.html
+
