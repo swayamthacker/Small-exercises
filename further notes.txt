@@ -59,3 +59,18 @@ http://stackoverflow.com/questions/26133346/loop-for-forecasting-values-on-a-dat
 
 https://www.dataiku.com/learn/guide/code/r/time_series.html
 
+
+
+
+
+new links
+
+https://www.r-bloggers.com/forecasting-weekly-data/
+http://www.statmethods.net/advstats/timeseries.html
+https://www.r-bloggers.com/basic-forecasting/
+http://robjhyndman.com/hyndsight/dailydata/ 
+
+https://rpubs.com/nohaelprince/47545
+https://rpubs.com/emb90/137525
+http://r-statistics.co/Time-Series-Forecasting-With-R.html
+
