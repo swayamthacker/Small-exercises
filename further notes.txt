@@ -74,3 +74,5 @@ https://rpubs.com/nohaelprince/47545
 https://rpubs.com/emb90/137525
 http://r-statistics.co/Time-Series-Forecasting-With-R.html
 
+
+things to do:1. fix the time series object for both the methods and get proper graphs2. try to reduce rmse by trying more values of i for method 13. try to fit arima instead of linear regression for second method4. try tbats model as well as how to add trends, seasonal, holiday component after running arima on random (second method)5. make the code generic to accept all tickers, also add a for loop that loops through all tickers6. make a table that stores the tickers sorted by lowest RMSE (figure out how to do that)7. get the YOY change (compare 90 forecasted days with 90 days of 2015 -> do this for all 4 quarters, then see how the forecasted for each quarter of 2016 compared with the actual change in that quarter in 2016 (refer to the earnest_backtests_170104 sheet)8. estimate sales value for next quarter (so sum 90 days worth of sales, sum 90 days of lower end of CI and 90 days of upper end of CI)9. need to work on getting trends changing and inflection points, directional etcpriority: 1,2,5,6,7,8,3,4,95,6,7,8,1,9
