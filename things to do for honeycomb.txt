@@ -1,0 +1,49 @@
+         Point Forecast      Lo 80    Hi 80      Lo 95    Hi 95
+2015.677      31132.835   6315.793 55949.88  -6821.556 69087.23
+2015.680      21256.944  -3698.272 46212.16 -16908.766 59422.65
+2015.682      27697.981   2738.870 52657.09 -10473.685 65869.65
+
+
+things to do:
+
+1. fix the time series object for both the methods and get proper graphs
+2. try to reduce rmse by trying more values of i for method 1
+3. try to fit arima instead of linear regression for second method
+4. try tbats model as well as how to add trends, seasonal, holiday component after running arima on random (second method)
+5. make the code generic to accept all tickers, also add a for loop that loops through all tickers
+6. make a table that stores the tickers sorted by lowest RMSE (figure out how to do that)
+7. get the YOY change (compare 90 forecasted days with 90 days of 2015 -> do this for all 4 quarters, then see how the forecasted for each 
+quarter of 2016 compared with the actual change in that quarter in 2016 (refer to the earnest_backtests_170104 sheet)
+8. estimate sales value for next quarter (so sum 90 days worth of sales, sum 90 days of lower end of CI and 90 days of upper end of CI)
+9. need to work on getting trends changing and inflection points, directional etc
+
+10. do all of the above for the normalized data as well.
+
+
+Thought process for normalized: do forecast of index normalizer. then divide the forecasted index amount by the forecasted index normalizer
+to get the sales index.
+
+
+priority: 1,2,5,6,7,8,3,4,9
+
+5,6,7,8,1,9
+
+
+Once the code finishes, identify the 10 best tickers (with lowest RMSE). Then forecast not just 2016 but also 2017 for those tickers.
+5,6 - done
+
+do 7,8 for the top 10 names and possibly do 9
+
+excel sheet
+
+11 tabs
+
+1st tab = tickers and rmse
+
+other 10 tabs: each tab has
+
+1. all forecsted data for 2016 and 2017, calculate sales per quarter for 2016 and 2017 (present in a table), calculate YOY change per quarter
+between 2016 and 2015 (compare with the actual change given in earnest sheet), have a graph of 2016 sales and 2017 sales forecasts, next step
+is to identify trends/inflection points in those graphs
+
+send all this to joyce and then ask her if you are on the right track and whether you can procceed the same way for the normalized data.
