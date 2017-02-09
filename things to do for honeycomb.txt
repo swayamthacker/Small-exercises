@@ -43,7 +43,7 @@ excel sheet
 other 10 tabs: each tab has
 
 1. all forecsted data for 2016 and 2017, calculate sales per quarter for 2016 and 2017 (present in a table), calculate YOY change per quarter
-between 2016 and 2015 (compare with the actual change given in earnest sheet), have a graph of 2016 sales and 2017 sales forecasts, next step
+between 2016 and 2015 (compare with the actual change given in earnest sheet), have a graph of 2016 sales forecasts vs actual sales and 2017 sales forecasts, next step
 is to identify trends/inflection points in those graphs
 
 send all this to joyce and then ask her if you are on the right track and whether you can procceed the same way for the normalized data.
